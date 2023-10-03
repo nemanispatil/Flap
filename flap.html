@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" /> -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./frame.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <img class="logo" src="./bus-and-couch.jpg" alt="Logo" />
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required />
+            </div>
+            <button onclick="authenticate()">Login</button>
+        </div>
+
+        <div class="blank-section">
+            <img src="./1.png" alt="Image 3" style="max-width: 100%; max-height: 100%; object-fit: contain" />
+        </div>
+    </div>
+
+    <!-- <div class="form-container" style="display: none">
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label>Drawn Name:</label>
+                <input type="text" id="drawnName" onkeypress="moveToNext(event, 'checkedName')" />
+            </div>
+            <div class="form-group">
+                <label>Checked Name:</label>
+                <input type="text" id="checkedName" onkeypress="moveToNext(event, 'approvedName')" />
+            </div>
+            <div class="form-group">
+                <label>Approved Name:</label>
+                <input type="text" id="approvedName" onkeypress="moveToNext(event, 'date')" />
+            </div>
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="date" id="date" onkeypress="moveToNext(event, 'assemblyNumber')" />
+            </div>
+          
+            <div class="button-container">
+                <button class="launch-button" onclick="launchForm()">Launch</button>
+            </div>
+        </form>
+    </div> -->
+
+    <div class="form-container" style="display: none">
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label>Drawn Name:</label>
+                <input type="text" class="drawnName" placeholder="Name" onkeypress="moveToNext(event, 'checkedName')" />
+              </div>
+              <div class="form-group">
+                <label>Checked Name:</label>
+                <input type="text" class="checkedName" onkeypress="moveToNext(event, 'approvedName')" />
+              </div>
+              <div class="form-group">
+                <label>Approved Name:</label>
+                <input type="text" class="approvedName"  onkeypress="moveToNext(event, 'Chassis')"/>
+              </div>
+              <div class="form-group">
+                <label>Chassis:</label>
+                <input type="text" class="Chassis" onkeypress="moveToNext(event, 'Project')" />
+              </div>
+              <div class="form-group">
+                <label>Project:</label>
+                <input type="text" class="Project"  onkeypress="moveToNext(event, 'Customer')"/>
+              </div>
+              <div class="form-group">
+                <label>Customer:</label>
+                <input type="text" class="Customer"  onkeypress="moveToNext(event, 'date')"/>
+              </div>
+              <div class="form-group">
+                <label>Date:</label>
+                <input type="date" class="date" onkeypress="moveToNext(event, 'assemblyNumber')"/>
+              </div>
+              <div class="form-group">
+                <label>Assembly Number:</label>
+                <input type="text" class="assemblyNumber" onkeypress="moveToNext(event, 'frameNumber')" />
+              </div>
+              <div class="form-group">
+                <label>Frame Number:</label>
+                <input type="text" class="frameNumber" onkeypress="moveToNext(event, 'panelNumber')" />
+              </div>
+              <div class="form-group">
+                <label>Panel Number:</label>
+                <input type="text" class="panelNumber" onkeypress="moveToNext(event, 'length')" />
+              </div>
+              <div class="form-group">
+                <label>Length:</label>
+                <input type="text" class="length"  onkeypress="moveToNext(event, 'width')"/>
+              </div>
+              <div class="form-group">
+                <label>Width:</label>
+                <input type="text" class="width" />
+              </div>
+        
+         
+              <div class="button-container">
+                <button class="launch-button" onclick="launchForm()">Launch</button>
+              </div>
+           
+        </form>
+       
+    </div>
+
+    <div class="content" style="display: none">
+            <div class="parent">
+                <div class="div">
+                  <img class="auto-1-icon" alt="" src="./auto-1@2x.png" />
+                  <div class="litem1"></div>
+                  <div class="litem11">132</div>
+                  <div class="litem12">134</div>
+                  <div class="litem13">135</div>
+                  <div class="litem14">136</div>
+                  <div class="litem15">137</div>
+                  <div class="litem16">138</div>
+                  <div class="litem17">139</div>
+                  <div class="litem18"></div>
+                  <div class="litem19"></div>
+                  <div class="qitem1">1</div>
+                  <div class="qitem11"></div>
+                  <div class="qitem12">1</div>
+                  <div class="qitem13">1</div>
+                  <div class="qitem14">1</div>
+                  <div class="qitem15">1</div>
+                  <div class="qitem16">1</div>
+                  <div class="qitem17">1</div>
+                  <div class="qitem18">1</div>
+                  <div class="qitem19">1</div>
+                  <div class="qitem110">1</div>
+                  <div class="qitem111">1</div>
+                  <div class="titem1">2.0</div>
+                  <div class="titem11"></div>
+                  <div class="titem12">2.0</div>
+                  <div class="titem13">2.0</div>
+                  <div class="titem14">2.0</div>
+                  <div class="titem15">2.0</div>
+                  <div class="titem16"></div>
+                  <div class="titem17">2.0</div>
+                  <div class="titem18">2.0</div>
+                  <div class="titem19"></div>
+                  <div class="titem110"></div>
+                  <div class="titem111">2.0</div>
+                  <div class="mitem1">AE</div>
+                  <div class="mitem11">AE</div>
+                  <div class="mitem12">AE</div>
+                  <div class="mitem13">SS</div>
+                  <div class="mitem14">AE</div>
+                  <div class="mitem15">AE</div>
+                  <div class="mitem121">AE</div>
+                  <div class="litem110">1315</div>
+                  <div class="div1">1500</div>
+                  <div class="div2">12</div>
+                  <div class="div3">1</div>
+                  <div class="div4">2</div>
+                  <div class="div5">3</div>
+                  <div class="div6">4</div>
+                  <div class="div7">5</div>
+                  <div class="div8">6</div>
+                  <div class="div9">7</div>
+                  <div class="div10">8</div>
+                  <div class="div11">9</div>
+                  <div class="div12">10</div>
+                  <div class="div13">11</div>
+                  <div class="div14">12</div>
+                  <div class="div15">13</div>
+                  <div class="div16">14</div>
+                  <div class="div17">15</div>
+                  <div class="div18">16</div>
+                  <div class="div19">17</div>
+                  <div class="div20">18</div>
+                  <div class="div21">19</div>
+                  <div class="div22">20</div>
+                  <div class="div23">21</div>
+                  <div class="div24">22</div>
+                  <div class="div25">23</div>
+                  <div class="div26">24</div>
+                  <div class="div27">25</div>
+                  <div class="div28">26</div>
+                  <div class="div29">27</div>
+                  <div class="div30">28</div>
+                  <div class="div31">29</div>
+                  <div class="div32">30</div>
+                  <div class="div33">31</div>
+                  <div class="div34">32</div>
+                  <div class="div35">33</div>
+                  <div class="div36">34</div>
+                  <div class="div37">35</div>
+                  <div class="div38">36</div>
+                  <div class="qitem112">A</div>
+                  <div class="div39">13-09-2023</div>
+                  <div class="nemani">NEMANI</div>
+                  <div class="akash">AKASH</div>
+                  <div class="nemani1">NEMANI</div>
+                  <div class="div40">13-09-2023</div>
+                  <div class="div41">13-09-2023</div>
+                  <div class="div42">13-09-2023</div>
+                  <div class="akash1">AKASH</div>
+                  <div class="prc">PRC</div>
+                  <div class="bb-5950-wb">BB 5950 WB</div>
+                  <div class="odyssey">ODYSSEY</div>
+                  <div class="autobhan">AUTOBHAN</div>
+                  <div class="item1">D174 2004 00F</div>
+                  <div class="item11"></div>
+                  <div class="item12">D174 2004 00F</div>
+                  <div class="item13">D174 2004 00F</div>
+                  <div class="item14">D174 2004 00F</div>
+                  <div class="item15">D174 2004 00F</div>
+                  <div class="item16">D174 2004 00F</div>
+                  <div class="item17">D174 2004 00F</div>
+                  <div class="item18">D174 2004 00F</div>
+                  <div class="item19">D174 2004 00F</div>
+                  <div class="item110">D174 2004 00F</div>
+                  <div class="item111">D174 2004 00F</div>
+                  <div class="ditem3">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem31"></div>
+                  <div class="ditem32">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem33">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem34">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem35">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem36">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem37">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem38">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem39">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem310">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="ditem311">LH-PILLAR (S 20x40x2.0 AE)</div>
+                  <div class="baggangage-box-frame">BAGGAGE BOX FRAME</div>
+                  <div class="item112">D174 2004 00F</div>
+                  <div class="item113">HIGHLHIGHLIGHTED ITEMS ARE RIVISED</div>
+                  <div class="child"></div>
+                </div>
+        </div>
+        <button onclick="previousFunction()">Previous</button>
+        <button onclick="nextFunction()">Next</button>
+    </div>
+
+    <section class="i" style="display: none">
+        <div class="content">
+            <div class="parent">
+                <div class="div">
+                    <img class="auto-1-icon" alt="" src="./@test/public/auto-1@2x.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="result" style="display: none;">
+        <!-- Content for the result section -->
+        yuyruweyrewyryeureu
+        <button onclick="previousResult()">Previous</button>
+    </div>
+    
+    <script src="./navigation.js"></script>
+    
+</body>
+</html>
